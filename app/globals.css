@@ -1,7 +1,89 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --paper: #F6F2EA;
+  --paper-line: #E4DCCC;
+  --ink: #232323;
+  --ink-soft: #6B6459;
+  --teal: #2F6F63;
+  --teal-dark: #204A42;
+  --raspberry: #E1516B;
+  --grey-pen: #B9B2A6;
+  --card-bg: #FFFFFF;
+  --radius: 14px;
+}
+
+* { box-sizing: border-box; }
 
 html, body {
-  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--paper);
+  background-image: url('/background.png');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  background-attachment: fixed;
+  color: var(--ink);
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+}
+
+h1, h2, h3, .display {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+button {
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  border: none;
+}
+
+input, select {
+  font-family: 'Inter', sans-serif;
+}
+
+a { color: inherit; }
+
+.btn-primary {
+  background: var(--teal);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background 0.15s ease;
+}
+.btn-primary:hover { background: var(--teal-dark); }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--ink-soft);
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-weight: 500;
+  font-size: 14px;
+  border: 1px solid var(--paper-line);
+}
+.btn-ghost:hover { border-color: var(--ink-soft); }
+
+.field {
+  width: 100%;
+  padding: 11px 14px;
+  border-radius: 10px;
+  border: 1.5px solid var(--paper-line);
+  background: var(--card-bg);
+  font-size: 14px;
+  color: var(--ink);
+}
+.field:focus {
+  outline: none;
+  border-color: var(--teal);
+}
+.field:focus-visible, button:focus-visible, a:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 2px;
 }

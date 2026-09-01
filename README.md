@@ -1,5 +1,18 @@
-# Le Plumier
+# Pokédex à Stylos
 
-Catalogue de collection de stylos, avec comptes utilisateurs, hébergé gratuitement (Vercel + Supabase).
+Site perso pour répertorier une collection de stylos Legami à deux, avec grille "grisé / dégrisé".
 
-Le guide de mise en ligne complet est fourni séparément, étape par étape.
+## Configuration nécessaire avant déploiement
+
+Dans Vercel, ajoutez ces deux variables d'environnement (visibles dans Supabase > Settings > API) :
+
+- `NEXT_PUBLIC_SUPABASE_URL`
+- `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+
+## Développement local (optionnel)
+
+```
+npm install
+cp .env.local.example .env.local   # puis remplir les valeurs
+npm run dev
+```
